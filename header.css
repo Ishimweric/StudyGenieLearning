@@ -66,6 +66,7 @@ header{
 }
 .join-button{
     border-width: 1px;
+    border-color: blue;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: blue;
