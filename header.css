@@ -85,13 +85,48 @@ header{
     color: blue;
     border-color: blue;
 }
-
+.mobile-navigation{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    width: 30px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.mobile-navigation span{
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    transition: all 0.2s;
+}
+.navigation-links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+}
 /* tablet respnsive */
 @media(max-width:768px){
+    .mobile-navigation{
+        display: flex;
+    }
     .logo-section{
         width: 25%;
         max-width: 200px;
         margin-right:10px;
+    }
+    .navigation-links{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 72px; /* u know so it can go below the header*/
+        right: 0;
+        padding: 20px;
+        background-color: white;
+        width: 200px;
+    }
+    .navigation-links.active {
+        display: flex;
     }
     .navigation-bar{
         column-gap:15px;
